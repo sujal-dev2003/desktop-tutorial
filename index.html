@@ -1,83 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
-    <meta name="theme-color" content="#080b18" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Spider Lab Scientific Calculator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="city city-left" aria-hidden="true"></div>
-    <div class="city city-right" aria-hidden="true"></div>
-    <main class="calculator" aria-label="Spider Lab scientific calculator">
-      <div class="web web-top" aria-hidden="true"></div>
-      <div class="web web-bottom" aria-hidden="true"></div>
-      <div class="spider" aria-hidden="true"><span></span></div>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#112e44"><title>Tiwari's Cart — Everyday shopping, made simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .mini-links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.mini-links a{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px;text-decoration:none;font-size:11px;font-weight:700}.mini-links a:hover{border-color:var(--coral);color:var(--coral)}.about{max-width:1270px;margin:55px auto;padding:35px;background:#dce9e3;border-radius:8px}.about h2{font:600 28px "Space Grotesk";margin:0 0 10px}.about p:not(.eyebrow){color:#5f7578;font-size:12px;max-width:520px;line-height:1.6}.about a{color:var(--coral);font-size:11px;font-weight:700;text-decoration:none}@media(max-width:600px){.mini-links{grid-template-columns:1fr 1fr}.about{margin-left:20px;margin-right:20px}}
+  </style>
+  <style>
+    .price-status{display:block;color:var(--muted);font-size:9px;margin-top:7px}.filter-tabs .refresh-catalog{color:var(--coral);border-color:#f1c3b5}
+    .checkout-modal{border:0;border-radius:10px;width:min(480px,calc(100% - 28px));padding:28px;color:var(--ink);box-shadow:0 22px 80px #132d3d33}.checkout-modal::backdrop{background:#102c3d99}.modal-close{position:absolute;right:17px;top:12px;background:none;font-size:24px;color:var(--muted)}.checkout-modal h2{font:600 27px "Space Grotesk";margin:0 0 10px}.checkout-total{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:15px;font-size:12px;color:var(--muted)}.checkout-total strong{color:var(--ink);font:700 17px "Space Grotesk"}.payment-methods{display:grid;gap:8px;margin:16px 0}.payment-method{display:flex;align-items:center;text-align:left;gap:12px;border:1px solid var(--line);border-radius:6px;padding:11px;background:#fff}.payment-method.active{border-color:var(--coral);background:#fff7f4}.payment-method>b{font-size:18px;color:var(--coral)}.payment-method strong,.payment-method small{display:block}.payment-method strong{font-size:11px}.payment-method small{font-size:9px;color:var(--muted);margin-top:2px}.checkout-modal label{display:block;font-size:10px;font-weight:700;margin-top:12px}.checkout-modal input,.checkout-modal textarea{display:block;width:100%;border:1px solid var(--line);border-radius:4px;padding:10px;margin-top:6px;resize:vertical;outline-color:var(--coral)}.place-order{width:100%;background:var(--coral);color:#fff;padding:13px;border-radius:4px;font-size:11px;font-weight:700;margin-top:16px}.secure-note{display:block;text-align:center;color:var(--muted);font-size:9px;margin-top:12px}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Tiwari's Cart home"><span class="brand-icon">T</span><span>tiwari<span>'s cart</span></span></a>
+    <button class="location"><span class="pin">⌖</span><span>Deliver to<br><strong>Sujal Tiwari</strong></span></button>
+    <label class="search"><select id="categorySelect"><option value="all">All</option><option value="Tech">Electronics</option><option value="Home">Home</option><option value="Fashion">Fashion</option><option value="Fitness">Fitness</option></select><input id="searchInput" type="search" placeholder="Search for products, brands and more"><button id="searchButton">⌕</button></label>
+    <div class="top-links"><button class="top-link" id="ordersButton">Hello, Sujal<br><strong>Account & Orders⌄</strong></button><button class="top-link" id="wishlistButton">♡<br><strong>Wishlist</strong></button><button class="cart-button" id="cartButton"><span class="cart-count" id="cartCount">0</span> 🛒 <strong>Cart</strong></button></div>
+  </header>
+  <nav class="nav-row"><button id="categoryMenu">☰ &nbsp; All categories</button><a href="#deals">Today's deals</a><a href="#products">New arrivals</a><a href="#bestsellers">Best sellers</a><a href="#offers">Offers</a><a href="#service">Customer service</a><span class="nav-spacer"></span><a href="#about">About us</a><span>Free delivery on orders over ₹999</span></nav>
 
-      <header class="calc-header">
-        <div>
-          <p class="eyebrow"><span class="signal"></span> OSCORP // LAB 42</p>
-          <h1>SPIDER<span>LAB</span></h1>
-        </div>
-        <button class="history-button" id="historyButton" aria-label="Show calculation history" title="History">↶</button>
-      </header>
-
-      <section class="display" aria-live="polite">
-        <div class="display-label"><span id="modeLabel">DEG</span><span>READY</span></div>
-        <div class="previous" id="previous"></div>
-        <div class="current" id="current">0</div>
-      </section>
-
-      <section class="history" id="history" aria-label="Calculation history">
-        <div class="history-title">Mission log <button id="clearHistory">Clear</button></div>
-        <div id="historyList" class="history-list"><p>No calculations yet</p></div>
-      </section>
-
-      <section class="keys" aria-label="Scientific calculator buttons">
-        <button class="key scientific" data-action="function" data-value="sin(">sin</button>
-        <button class="key scientific" data-action="function" data-value="cos(">cos</button>
-        <button class="key scientific" data-action="function" data-value="tan(">tan</button>
-        <button class="key scientific" data-action="function" data-value="log(">log</button>
-        <button class="key scientific" data-action="function" data-value="ln(">ln</button>
-        <button class="key scientific" data-action="function" data-value="sqrt(">√</button>
-        <button class="key scientific" data-action="square">x²</button>
-        <button class="key scientific" data-action="constant" data-value="π">π</button>
-
-        <button class="key utility" data-action="clear">AC</button>
-        <button class="key utility" data-action="backspace">DEL</button>
-        <button class="key utility" data-action="parenthesis">( )</button>
-        <button class="key utility" data-action="percent">%</button>
-        <button class="key utility" data-action="angle">DEG</button>
-
-        <button class="key" data-number="7">7</button>
-        <button class="key" data-number="8">8</button>
-        <button class="key" data-number="9">9</button>
-        <button class="key operator" data-value="÷">÷</button>
-
-        <button class="key" data-number="4">4</button>
-        <button class="key" data-number="5">5</button>
-        <button class="key" data-number="6">6</button>
-        <button class="key operator" data-value="×">×</button>
-
-        <button class="key" data-number="1">1</button>
-        <button class="key" data-number="2">2</button>
-        <button class="key" data-number="3">3</button>
-        <button class="key operator" data-value="−">−</button>
-
-        <button class="key zero" data-number="0">0</button>
-        <button class="key" data-action="decimal">.</button>
-        <button class="key operator" data-value="+">+</button>
-        <button class="key equals" data-action="equals">=</button>
-      </section>
-      <p class="hint">TYPE A FORMULA · PRESS ENTER TO LAUNCH</p>
-    </main>
-    <script src="script.js"></script>
-  </body>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">THE HARBORCART EDIT</p><h1>Good things,<br><em>delivered.</em></h1><p>Discover thoughtful finds for every corner of your life — all in one place.</p><button class="hero-button" data-scroll="products">Shop the collection <span>→</span></button></div>
+      <div class="hero-art"><span class="sun"></span><span class="hero-card card-one">✦<small>NEW<br>SEASON</small></span><span class="hero-card card-two">HOME<br><b>ESSENTIALS</b></span><span class="hero-box"></span></div>
+    </section>
+    <section class="benefits"><div><b>↗</b><span><strong>Free, fast delivery</strong><small>On orders over ₹999</small></span></div><div><b>◇</b><span><strong>Curated quality</strong><small>Products you'll love</small></span></div><div><b>↺</b><span><strong>Easy returns</strong><small>30-day return promise</small></span></div><div><b>♢</b><span><strong>Secure payments</strong><small>100% protected checkout</small></span></div></section>
+    <section class="section" id="deals"><div class="section-head"><div><p class="eyebrow">HANDPICKED FOR YOU</p><h2>Shop by category</h2></div><a href="#products" class="text-link">View all categories →</a></div><div class="category-grid"><button class="category-tile tech" data-category="Tech"><span>◈</span><strong>Tech & gadgets</strong><small>Smart picks for every day</small></button><button class="category-tile home" data-category="Home"><span>⌂</span><strong>Home & living</strong><small>Make space feel like yours</small></button><button class="category-tile fashion" data-category="Fashion"><span>◇</span><strong>Style & fashion</strong><small>Wear your own story</small></button><button class="category-tile fitness" data-category="Fitness"><span>♧</span><strong>Fitness & wellness</strong><small>Feel good, every day</small></button></div></section>
+    <section class="section products-section" id="products"><div class="section-head"><div><p class="eyebrow">POPULAR RIGHT NOW</p><h2>Trending products</h2><small class="price-status" id="priceStatus">Prices shown in INR · catalog ready</small></div><div class="filter-tabs"><button class="refresh-catalog" id="refreshCatalog">↻ Refresh prices</button><button class="active" data-filter="all">All</button><button data-filter="Tech">Tech</button><button data-filter="Home">Home</button><button data-filter="Fashion">Fashion</button><button data-filter="Fitness">Fitness</button></div></div><div class="product-grid" id="productGrid"></div></section>
+    <section class="section" id="bestsellers"><div class="section-head"><div><p class="eyebrow">MOST LOVED BY SHOPPERS</p><h2>Best sellers</h2></div><a href="#products" class="text-link">Shop all products →</a></div><div class="mini-links"><a href="#products">Top-rated finds</a><a href="#products">Under ₹999</a><a href="#products">Gifts for everyone</a><a href="#products">Fresh arrivals</a></div></section>
+    <section class="promo" id="offers"><div><p class="eyebrow">TIWARI'S CART PLUS</p><h2>More joy.<br>Less waiting.</h2><p>Unlimited free delivery, early access to drops, and more for ₹149/month.</p><button class="dark-button" id="plusButton">Try Plus free for 30 days →</button></div><div class="promo-art"><span>PLUS</span><i>✦</i><b>30<br>DAYS</b></div></section>
+    <section class="service" id="service"><div><span class="service-icon">?</span><h3>Need a hand?</h3><p>Our friendly team is here every day, 8am–10pm.</p></div><button class="outline-button" id="helpButton">Visit help center →</button></section>
+    <section class="about" id="about"><p class="eyebrow">WHY TIWARI'S CART</p><h2>Everyday shopping, thoughtfully chosen.</h2><p>We bring together useful products, honest prices, and a smoother way to shop from one friendly place.</p><a href="#top">Back to top ↑</a></section>
+  </main>
+  <footer><div class="footer-brand"><span class="brand-icon">T</span> Tiwari's Cart</div><span>© 2024 Tiwari's Cart</span><span>Made for everyday living</span><span class="footer-spacer"></span><a href="#service">Help center</a><a href="#deals">Categories</a><a href="#offers">Offers</a><a href="#about">About</a><a href="#top">Back to top ↑</a></footer>
+  <aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><h2>Your cart <span id="drawerCount">0 items</span></h2><button id="closeCart">×</button></div><div class="cart-items" id="cartItems"></div><div class="empty-cart" id="emptyCart"><span>🛒</span><h3>Your cart is waiting</h3><p>Add something lovely to get started.</p></div><div class="cart-summary" id="cartSummary"><div><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><small>Taxes and delivery calculated at checkout</small><button class="checkout-button" id="checkoutButton">Proceed to checkout →</button></div></aside><div class="overlay" id="overlay"></div><div class="toast" id="toast"></div>
+  <dialog class="checkout-modal" id="checkoutModal"><button class="modal-close" id="closeCheckout">×</button><p class="eyebrow">SECURE CHECKOUT</p><h2>Complete your order</h2><p class="checkout-total">Order total <strong id="checkoutTotal">₹0</strong></p><div class="payment-methods"><button class="payment-method active" data-payment="upi"><b>◉</b><span><strong>UPI</strong><small>Google Pay, PhonePe, Paytm</small></span></button><button class="payment-method" data-payment="card"><b>▣</b><span><strong>Card</strong><small>Credit or debit card</small></span></button><button class="payment-method" data-payment="cod"><b>▤</b><span><strong>Cash on delivery</strong><small>Pay when your order arrives</small></span></button></div><form id="paymentForm"><label>Full name<input name="name" required placeholder="Sujal Tiwari"></label><label>Delivery address<textarea name="address" required rows="2" placeholder="House no, street, city, PIN code"></textarea></label><label id="paymentField">UPI ID<input name="payment" required placeholder="name@bank"></label><button class="place-order" type="submit">Pay securely & place order</button></form><small class="secure-note">🔒 Demo checkout — no real payment is charged</small></dialog>
+  <script src="app.js"></script>
+</body>
 </html>
