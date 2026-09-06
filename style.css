@@ -177,6 +177,8 @@ img {
   opacity: 0.56;
   transform: scale(1.08);
   animation: mediaPan 18s ease-in-out infinite alternate;
+  will-change: transform;
+  transition: transform 0.25s ease-out;
 }
 
 .hero-overlay {
@@ -198,6 +200,8 @@ img {
   filter: blur(20px);
   opacity: 0.5;
   pointer-events: none;
+  will-change: transform;
+  transition: transform 0.4s ease-out;
 }
 
 .orb-one {
@@ -447,6 +451,8 @@ img {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  transition: background-position 0.45s ease-out;
+  will-change: background-position;
 }
 
 .feature-panel::before {
@@ -669,5 +675,24 @@ img {
 
   .launch-card {
     padding: 18px 16px 16px;
+  }
+
+  .feature-copy h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .feature-copy p {
+    font-size: 0.94rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
