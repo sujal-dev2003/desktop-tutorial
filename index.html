@@ -1,83 +1,243 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
-    <meta name="theme-color" content="#080b18" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Spider Lab Scientific Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AstoSpace is a high-performance aerospace landing page inspired by modern space exploration brands." />
+    <title>AstoSpace | Building the Future Beyond Earth</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="city city-left" aria-hidden="true"></div>
-    <div class="city city-right" aria-hidden="true"></div>
-    <main class="calculator" aria-label="Spider Lab scientific calculator">
-      <div class="web web-top" aria-hidden="true"></div>
-      <div class="web web-bottom" aria-hidden="true"></div>
-      <div class="spider" aria-hidden="true"><span></span></div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="AstoSpace home">
+          <span class="brand-mark">A</span>
+          <span class="brand-text">ASTOSPACE</span>
+        </a>
 
-      <header class="calc-header">
-        <div>
-          <p class="eyebrow"><span class="signal"></span> OSCORP // LAB 42</p>
-          <h1>SPIDER<span>LAB</span></h1>
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+          <a href="#vehicles">Vehicles</a>
+          <a href="#missions">Missions</a>
+          <a href="#technology">Technology</a>
+          <a href="#launches">Launches</a>
+          <a href="#shop">Shop</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#missions" class="nav-link">Explore</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <button class="history-button" id="historyButton" aria-label="Show calculation history" title="History">↶</button>
-      </header>
+      </div>
+    </header>
 
-      <section class="display" aria-live="polite">
-        <div class="display-label"><span id="modeLabel">DEG</span><span>READY</span></div>
-        <div class="previous" id="previous"></div>
-        <div class="current" id="current">0</div>
+    <main id="top">
+      <section class="hero feature-panel" aria-label="Hero section">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80"
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-earth-and-space-19534-large.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="orb orb-one" aria-hidden="true"></div>
+        <div class="orb orb-two" aria-hidden="true"></div>
+        <div class="container hero-inner reveal">
+          <p class="eyebrow">MAKING LIFE MULTIPLANETARY</p>
+          <h1>Reach the next frontier.</h1>
+          <p class="hero-copy">
+            SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not.
+          </p>
+          <div class="hero-actions">
+            <a href="#technology" class="btn btn-primary">EXPLORE</a>
+          </div>
+        </div>
       </section>
 
-      <section class="history" id="history" aria-label="Calculation history">
-        <div class="history-title">Mission log <button id="clearHistory">Clear</button></div>
-        <div id="historyList" class="history-list"><p>No calculations yet</p></div>
+      <section class="launches section-block" id="launches">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow dark">UPCOMING LAUNCHES</p>
+          </div>
+
+          <div class="launch-grid">
+            <article class="launch-card reveal">
+              <div class="launch-topline">
+                <span class="launch-badge">Starlink Mission</span>
+                <span class="live-tag">T-</span>
+              </div>
+
+              <div class="countdown" data-target="2026-09-10T21:07:00+05:30">
+                <div><span class="count-value">00</span><small>Days</small></div>
+                <div><span class="count-value">00</span><small>Hours</small></div>
+                <div><span class="count-value">00</span><small>Minutes</small></div>
+                <div><span class="count-value">00</span><small>Seconds</small></div>
+              </div>
+            </article>
+
+            <article class="launch-card reveal">
+              <div class="launch-topline">
+                <span class="launch-badge">USSF-153 Mission</span>
+                <span class="live-tag">T-</span>
+              </div>
+
+              <div class="countdown" data-target="2026-09-11T00:07:00+05:30">
+                <div><span class="count-value">00</span><small>Days</small></div>
+                <div><span class="count-value">00</span><small>Hours</small></div>
+                <div><span class="count-value">00</span><small>Minutes</small></div>
+                <div><span class="count-value">00</span><small>Seconds</small></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="cta-row reveal">
+            <a href="#missions" class="btn btn-secondary">ALL UPCOMING LAUNCHES</a>
+          </div>
+        </div>
       </section>
 
-      <section class="keys" aria-label="Scientific calculator buttons">
-        <button class="key scientific" data-action="function" data-value="sin(">sin</button>
-        <button class="key scientific" data-action="function" data-value="cos(">cos</button>
-        <button class="key scientific" data-action="function" data-value="tan(">tan</button>
-        <button class="key scientific" data-action="function" data-value="log(">log</button>
-        <button class="key scientific" data-action="function" data-value="ln(">ln</button>
-        <button class="key scientific" data-action="function" data-value="sqrt(">√</button>
-        <button class="key scientific" data-action="square">x²</button>
-        <button class="key scientific" data-action="constant" data-value="π">π</button>
+      <section class="media-showcase section-block" aria-label="AstoSpace mission videos">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow dark">MISSION REEL</p>
+            <h2>See the work behind the next great journey.</h2>
+          </div>
 
-        <button class="key utility" data-action="clear">AC</button>
-        <button class="key utility" data-action="backspace">DEL</button>
-        <button class="key utility" data-action="parenthesis">( )</button>
-        <button class="key utility" data-action="percent">%</button>
-        <button class="key utility" data-action="angle">DEG</button>
+          <div class="media-grid">
+            <article class="media-card reveal">
+              <div class="video-frame">
+                <video
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80"
+                >
+                  <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-earth-and-space-19534-large.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="media-copy">
+                <span>01 / ORBIT</span>
+                <h3>Earth from a new perspective.</h3>
+              </div>
+            </article>
 
-        <button class="key" data-number="7">7</button>
-        <button class="key" data-number="8">8</button>
-        <button class="key" data-number="9">9</button>
-        <button class="key operator" data-value="÷">÷</button>
-
-        <button class="key" data-number="4">4</button>
-        <button class="key" data-number="5">5</button>
-        <button class="key" data-number="6">6</button>
-        <button class="key operator" data-value="×">×</button>
-
-        <button class="key" data-number="1">1</button>
-        <button class="key" data-number="2">2</button>
-        <button class="key" data-number="3">3</button>
-        <button class="key operator" data-value="−">−</button>
-
-        <button class="key zero" data-number="0">0</button>
-        <button class="key" data-action="decimal">.</button>
-        <button class="key operator" data-value="+">+</button>
-        <button class="key equals" data-action="equals">=</button>
+            <article class="media-card reveal">
+              <div class="video-frame">
+                <video
+                  autoplay
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1000&q=80"
+                >
+                  <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-earth-and-space-19534-large.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="media-copy">
+                <span>02 / MISSION</span>
+                <h3>Every launch begins with a bold idea.</h3>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
-      <p class="hint">TYPE A FORMULA · PRESS ENTER TO LAUNCH</p>
+
+      <section class="feature-panel technology-panel section-block" id="technology">
+        <div class="container feature-layout reveal">
+          <div class="feature-copy">
+            <p class="eyebrow">REVOLUTIONIZING SPACE TECHNOLOGY</p>
+            <h2>Reusable systems built to carry both crew and cargo to Earth orbit and beyond.</h2>
+            <p>
+              SpaceX’s Starship spacecraft and Super Heavy rocket are designed as a fully reusable transportation system to make access to deep space routine, affordable, and sustainable.
+            </p>
+            <a href="https://www.spacex.com/vehicles/starship" class="btn btn-primary" target="_blank" rel="noopener noreferrer">LEARN MORE</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-panel rideshare-panel section-block" id="missions">
+        <div class="container feature-layout reveal">
+          <div class="feature-copy">
+            <p class="eyebrow">WORLD’S LEADING LAUNCH SERVICE PROVIDER</p>
+            <h2>Reliable, reusable rockets transforming access to space for everyone.</h2>
+            <p>
+              SpaceX leads the world in launches with dependable vehicles and a rapidly reusable architecture that makes routine space transportation increasingly practical.
+            </p>
+            <a href="https://www.spacex.com/rideshare" class="btn btn-primary" target="_blank" rel="noopener noreferrer">RESERVE YOUR RIDE</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-panel astronaut-panel section-block" id="vehicles">
+        <div class="container feature-layout reveal">
+          <div class="feature-copy">
+            <p class="eyebrow">ADVANCING HUMAN SPACEFLIGHT</p>
+            <h2>Returning human spaceflight capabilities to the United States and beyond.</h2>
+            <p>
+              Since 2020, SpaceX has helped build a new era where not just hundreds, but eventually millions of people can explore the cosmos.
+            </p>
+            <a href="https://www.spacex.com/humanspaceflight" class="btn btn-primary" target="_blank" rel="noopener noreferrer">JOIN A MISSION</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-panel starlink-panel section-block" id="shop">
+        <div class="container feature-layout reveal">
+          <div class="feature-copy">
+            <p class="eyebrow">DELIVERING HIGH-SPEED INTERNET FROM SPACE</p>
+            <h2>Reliable broadband designed for work, streaming, gaming, and live communication.</h2>
+            <p>
+              Starlink is the world’s most advanced satellite constellation in low-Earth orbit, delivering high-speed internet globally.
+            </p>
+            <a href="https://www.starlink.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ORDER NOW</a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand-wrap">
+          <a href="#top" class="brand footer-brand" aria-label="AstoSpace home">
+            <span class="brand-mark">A</span>
+            <span class="brand-text">ASTOSPACE</span>
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.spacex.com/careers" target="_blank" rel="noopener noreferrer">CAREERS</a>
+          <a href="https://www.spacex.com/updates" target="_blank" rel="noopener noreferrer">UPDATES</a>
+          <a href="https://www.spacex.com/assets/media/privacy_policy_spacex.pdf" target="_blank" rel="noopener noreferrer">PRIVACY POLICY</a>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.spacex.com/supplier" target="_blank" rel="noopener noreferrer">SUPPLIERS</a>
+          <a href="https://ir.spacex.com/" target="_blank" rel="noopener noreferrer">INVESTORS</a>
+          <a href="mailto:hello@astospace.example">CONTACT</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 ASTOSPACE</span>
+        <span>All rights reserved.</span>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
