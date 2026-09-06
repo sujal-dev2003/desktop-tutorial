@@ -1,243 +1,101 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AstoSpace is a high-performance aerospace landing page inspired by modern space exploration brands." />
-    <title>AstoSpace | Building the Future Beyond Earth</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The Wizarding Atlas: discover characters, places, and turning points in a magical world." />
+    <title>The Wizarding Atlas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#top" class="brand" aria-label="AstoSpace home">
-          <span class="brand-mark">A</span>
-          <span class="brand-text">ASTOSPACE</span>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="The Wizarding Atlas home">
+          <span class="brand-crest" aria-hidden="true">✦</span>
+          <span><strong>THE WIZARDING</strong><small>ATLAS</small></span>
         </a>
-
-        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-          <a href="#vehicles">Vehicles</a>
-          <a href="#missions">Missions</a>
-          <a href="#technology">Technology</a>
-          <a href="#launches">Launches</a>
-          <a href="#shop">Shop</a>
+        <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+          <a href="#home" data-page-link="home">Home</a>
+          <a href="#characters" data-page-link="characters">Characters</a>
+          <a href="#places" data-page-link="places">Places</a>
+          <a href="#history" data-page-link="history">History</a>
         </nav>
-
-        <div class="nav-actions">
-          <a href="#missions" class="nav-link">Explore</a>
-          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+        <div class="header-actions">
+          <button class="icon-button" id="favoritesButton" type="button" aria-label="Show saved favorites">♡<span id="favoriteCount">0</span></button>
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main id="top">
-      <section class="hero feature-panel" aria-label="Hero section">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          poster="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-earth-and-space-19534-large.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="orb orb-one" aria-hidden="true"></div>
-        <div class="orb orb-two" aria-hidden="true"></div>
-        <div class="container hero-inner reveal">
-          <p class="eyebrow">MAKING LIFE MULTIPLANETARY</p>
-          <h1>Reach the next frontier.</h1>
-          <p class="hero-copy">
-            SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not.
-          </p>
-          <div class="hero-actions">
-            <a href="#technology" class="btn btn-primary">EXPLORE</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="launches section-block" id="launches">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow dark">UPCOMING LAUNCHES</p>
-          </div>
-
-          <div class="launch-grid">
-            <article class="launch-card reveal">
-              <div class="launch-topline">
-                <span class="launch-badge">Starlink Mission</span>
-                <span class="live-tag">T-</span>
+      <main>
+        <section class="page-view active" data-page="home">
+          <div class="hero">
+            <div class="hero-copy">
+              <p class="kicker">An interactive field guide</p>
+              <h1>Every story leaves<br /><em>a trace.</em></h1>
+              <p class="hero-intro">Map the people, places, and turning points that shaped a world of wonder. Pin a discovery, drag a card, and start your own collection.</p>
+              <div class="hero-actions">
+                <a class="button button-gold" href="#characters">Meet the characters <span>→</span></a>
+                <a class="text-link" href="#history">Read the timeline</a>
               </div>
-
-              <div class="countdown" data-target="2026-09-10T21:07:00+05:30">
-                <div><span class="count-value">00</span><small>Days</small></div>
-                <div><span class="count-value">00</span><small>Hours</small></div>
-                <div><span class="count-value">00</span><small>Minutes</small></div>
-                <div><span class="count-value">00</span><small>Seconds</small></div>
-              </div>
-            </article>
-
-            <article class="launch-card reveal">
-              <div class="launch-topline">
-                <span class="launch-badge">USSF-153 Mission</span>
-                <span class="live-tag">T-</span>
-              </div>
-
-              <div class="countdown" data-target="2026-09-11T00:07:00+05:30">
-                <div><span class="count-value">00</span><small>Days</small></div>
-                <div><span class="count-value">00</span><small>Hours</small></div>
-                <div><span class="count-value">00</span><small>Minutes</small></div>
-                <div><span class="count-value">00</span><small>Seconds</small></div>
-              </div>
-            </article>
+            </div>
+            <div class="hero-art" aria-label="Illustration of a magical observatory">
+              <div class="moon"></div><div class="orbital-ring ring-one"></div><div class="orbital-ring ring-two"></div>
+              <div class="tower"><span></span><i></i><b></b></div>
+              <div class="constellation constellation-one">✦　·　✦</div>
+              <div class="constellation constellation-two">·　✧　·</div>
+            </div>
           </div>
-
-          <div class="cta-row reveal">
-            <a href="#missions" class="btn btn-secondary">ALL UPCOMING LAUNCHES</a>
+          <div class="section-heading">
+            <div><p class="kicker">Choose your path</p><h2>A living index of magic</h2></div>
+            <p>Built for curious minds, restless explorers, and anyone who believes the details matter.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="media-showcase section-block" aria-label="AstoSpace mission videos">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow dark">MISSION REEL</p>
-            <h2>See the work behind the next great journey.</h2>
+          <div class="feature-grid">
+            <a class="feature-card feature-card-green" href="#characters"><span class="feature-number">01</span><span class="feature-icon">♜</span><h3>Characters</h3><p>Discover their gifts, allegiances, and defining moments.</p><span class="card-arrow">Explore index →</span></a>
+            <a class="feature-card feature-card-ink" href="#places"><span class="feature-number">02</span><span class="feature-icon">⌖</span><h3>Places</h3><p>Travel from hidden alleys to castles above the clouds.</p><span class="card-arrow">Open the map →</span></a>
+            <a class="feature-card feature-card-gold" href="#history"><span class="feature-number">03</span><span class="feature-icon">⌛</span><h3>History</h3><p>Follow the choices and conflicts that changed everything.</p><span class="card-arrow">Enter the archive →</span></a>
           </div>
-
-          <div class="media-grid">
-            <article class="media-card reveal">
-              <div class="video-frame">
-                <video
-                  autoplay
-                  controls
-                  muted
-                  loop
-                  playsinline
-                  preload="metadata"
-                  poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80"
-                >
-                  <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-earth-and-space-19534-large.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <div class="media-copy">
-                <span>01 / ORBIT</span>
-                <h3>Earth from a new perspective.</h3>
-              </div>
-            </article>
-
-            <article class="media-card reveal">
-              <div class="video-frame">
-                <video
-                  autoplay
-                  controls
-                  muted
-                  loop
-                  playsinline
-                  preload="metadata"
-                  poster="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1000&q=80"
-                >
-                  <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-earth-and-space-19534-large.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <div class="media-copy">
-                <span>02 / MISSION</span>
-                <h3>Every launch begins with a bold idea.</h3>
-              </div>
-            </article>
+          <div class="home-split">
+            <section class="news-panel">
+              <div class="mini-heading"><p class="kicker">From the daily prophet</p><a href="#history">View the archive →</a></div>
+              <article class="news-lead"><span class="news-date">LATEST DISPATCH · 06 SEPTEMBER 2026</span><h3>The Chamber of Secrets has been opened</h3><p>Follow the clues, revisit the story, and explore the people and places connected to Hogwarts' most whispered mystery.</p><a class="text-link dark-link" href="#places">Read the dispatch</a></article>
+              <div class="news-list"><article><span>NEWS</span><strong>New season casting brings familiar names to the screen</strong></article><article><span>FEATURE</span><strong>Which Hogwarts subject would become your specialty?</strong></article></div>
+            </section>
+            <section class="activity-panel">
+              <p class="kicker">Make your mark</p><h2>Find your place in the story.</h2><p>Take a personality quiz, choose a house, and create a field guide that feels like yours.</p>
+              <div class="activity-row"><button class="activity-card" type="button" data-activity="sorting">⌁ <span>Sorting<br /><small>Discover your house</small></span></button><button class="activity-card" type="button" data-activity="quiz">✧ <span>Quick quiz<br /><small>Test your knowledge</small></span></button></div>
+            </section>
           </div>
-        </div>
-      </section>
+          <aside class="field-note draggable" data-draggable="true" aria-label="Movable field note">
+            <button class="close-note" type="button" aria-label="Close field note">×</button>
+            <span class="note-pin">✦</span><p>FIELD NOTE 07</p><strong>Drag me anywhere.</strong><small>Try moving this note around the page.</small>
+          </aside>
+        </section>
 
-      <section class="feature-panel technology-panel section-block" id="technology">
-        <div class="container feature-layout reveal">
-          <div class="feature-copy">
-            <p class="eyebrow">REVOLUTIONIZING SPACE TECHNOLOGY</p>
-            <h2>Reusable systems built to carry both crew and cargo to Earth orbit and beyond.</h2>
-            <p>
-              SpaceX’s Starship spacecraft and Super Heavy rocket are designed as a fully reusable transportation system to make access to deep space routine, affordable, and sustainable.
-            </p>
-            <a href="https://www.spacex.com/vehicles/starship" class="btn btn-primary" target="_blank" rel="noopener noreferrer">LEARN MORE</a>
-          </div>
-        </div>
-      </section>
+        <section class="page-view" data-page="characters">
+          <div class="page-banner banner-characters"><p class="kicker">The people behind the legends</p><h1>Characters</h1><p>Browse by house, talent, or the kind of courage they carry.</p></div>
+          <div class="toolbar"><label class="search-field"><span>⌕</span><input id="characterSearch" type="search" placeholder="Search the character index..." /></label><div class="filter-pills" id="characterFilters"><button class="pill active" data-filter="all">All</button><button class="pill" data-filter="gryffindor">Gryffindor</button><button class="pill" data-filter="slytherin">Slytherin</button><button class="pill" data-filter="ravenclaw">Ravenclaw</button><button class="pill" data-filter="hufflepuff">Hufflepuff</button></div></div>
+          <div class="card-grid" id="characterGrid"></div>
+        </section>
 
-      <section class="feature-panel rideshare-panel section-block" id="missions">
-        <div class="container feature-layout reveal">
-          <div class="feature-copy">
-            <p class="eyebrow">WORLD’S LEADING LAUNCH SERVICE PROVIDER</p>
-            <h2>Reliable, reusable rockets transforming access to space for everyone.</h2>
-            <p>
-              SpaceX leads the world in launches with dependable vehicles and a rapidly reusable architecture that makes routine space transportation increasingly practical.
-            </p>
-            <a href="https://www.spacex.com/rideshare" class="btn btn-primary" target="_blank" rel="noopener noreferrer">RESERVE YOUR RIDE</a>
-          </div>
-        </div>
-      </section>
+        <section class="page-view" data-page="places">
+          <div class="page-banner banner-places"><p class="kicker">Beyond the brick wall</p><h1>Places</h1><p>Every location has a secret, a story, and a way in.</p></div>
+          <div class="toolbar"><label class="search-field"><span>⌕</span><input id="placeSearch" type="search" placeholder="Search locations..." /></label><div class="filter-pills" id="placeFilters"><button class="pill active" data-filter="all">All places</button><button class="pill" data-filter="school">School</button><button class="pill" data-filter="village">Village</button><button class="pill" data-filter="wild">Wild places</button></div></div>
+          <div class="card-grid place-grid" id="placeGrid"></div>
+        </section>
 
-      <section class="feature-panel astronaut-panel section-block" id="vehicles">
-        <div class="container feature-layout reveal">
-          <div class="feature-copy">
-            <p class="eyebrow">ADVANCING HUMAN SPACEFLIGHT</p>
-            <h2>Returning human spaceflight capabilities to the United States and beyond.</h2>
-            <p>
-              Since 2020, SpaceX has helped build a new era where not just hundreds, but eventually millions of people can explore the cosmos.
-            </p>
-            <a href="https://www.spacex.com/humanspaceflight" class="btn btn-primary" target="_blank" rel="noopener noreferrer">JOIN A MISSION</a>
-          </div>
-        </div>
-      </section>
+        <section class="page-view" data-page="history">
+          <div class="page-banner banner-history"><p class="kicker">The archive of turning points</p><h1>History</h1><p>Read the moments that made the present possible.</p></div>
+          <div class="timeline" id="timeline"></div>
+        </section>
+      </main>
 
-      <section class="feature-panel starlink-panel section-block" id="shop">
-        <div class="container feature-layout reveal">
-          <div class="feature-copy">
-            <p class="eyebrow">DELIVERING HIGH-SPEED INTERNET FROM SPACE</p>
-            <h2>Reliable broadband designed for work, streaming, gaming, and live communication.</h2>
-            <p>
-              Starlink is the world’s most advanced satellite constellation in low-Earth orbit, delivering high-speed internet globally.
-            </p>
-            <a href="https://www.starlink.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ORDER NOW</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-brand-wrap">
-          <a href="#top" class="brand footer-brand" aria-label="AstoSpace home">
-            <span class="brand-mark">A</span>
-            <span class="brand-text">ASTOSPACE</span>
-          </a>
-        </div>
-
-        <div class="footer-links">
-          <a href="https://www.spacex.com/careers" target="_blank" rel="noopener noreferrer">CAREERS</a>
-          <a href="https://www.spacex.com/updates" target="_blank" rel="noopener noreferrer">UPDATES</a>
-          <a href="https://www.spacex.com/assets/media/privacy_policy_spacex.pdf" target="_blank" rel="noopener noreferrer">PRIVACY POLICY</a>
-        </div>
-
-        <div class="footer-links">
-          <a href="https://www.spacex.com/supplier" target="_blank" rel="noopener noreferrer">SUPPLIERS</a>
-          <a href="https://ir.spacex.com/" target="_blank" rel="noopener noreferrer">INVESTORS</a>
-          <a href="mailto:hello@astospace.example">CONTACT</a>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <span>© 2026 ASTOSPACE</span>
-        <span>All rights reserved.</span>
-      </div>
-    </footer>
-
+      <footer class="site-footer"><div><span class="brand-crest">✦</span><strong>THE WIZARDING ATLAS</strong></div><p>An independent fan-made study in web design and storytelling.</p><span>© 2026</span></footer>
+    </div>
+    <dialog class="detail-modal" id="detailModal"><button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button><div id="modalContent"></div></dialog>
+    <div class="toast" id="toast" role="status"></div>
     <script src="script.js"></script>
   </body>
 </html>
