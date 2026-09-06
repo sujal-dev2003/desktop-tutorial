@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+    <meta name="theme-color" content="#080b18" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Spider Lab Scientific Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="city city-left" aria-hidden="true"></div>
+    <div class="city city-right" aria-hidden="true"></div>
+    <main class="calculator" aria-label="Spider Lab scientific calculator">
+      <div class="web web-top" aria-hidden="true"></div>
+      <div class="web web-bottom" aria-hidden="true"></div>
+      <div class="spider" aria-hidden="true"><span></span></div>
+
+      <header class="calc-header">
+        <div>
+          <p class="eyebrow"><span class="signal"></span> OSCORP // LAB 42</p>
+          <h1>SPIDER<span>LAB</span></h1>
+        </div>
+        <button class="history-button" id="historyButton" aria-label="Show calculation history" title="History">↶</button>
+      </header>
+
+      <section class="display" aria-live="polite">
+        <div class="display-label"><span id="modeLabel">DEG</span><span>READY</span></div>
+        <div class="previous" id="previous"></div>
+        <div class="current" id="current">0</div>
+      </section>
+
+      <section class="history" id="history" aria-label="Calculation history">
+        <div class="history-title">Mission log <button id="clearHistory">Clear</button></div>
+        <div id="historyList" class="history-list"><p>No calculations yet</p></div>
+      </section>
+
+      <section class="keys" aria-label="Scientific calculator buttons">
+        <button class="key scientific" data-action="function" data-value="sin(">sin</button>
+        <button class="key scientific" data-action="function" data-value="cos(">cos</button>
+        <button class="key scientific" data-action="function" data-value="tan(">tan</button>
+        <button class="key scientific" data-action="function" data-value="log(">log</button>
+        <button class="key scientific" data-action="function" data-value="ln(">ln</button>
+        <button class="key scientific" data-action="function" data-value="sqrt(">√</button>
+        <button class="key scientific" data-action="square">x²</button>
+        <button class="key scientific" data-action="constant" data-value="π">π</button>
+
+        <button class="key utility" data-action="clear">AC</button>
+        <button class="key utility" data-action="backspace">DEL</button>
+        <button class="key utility" data-action="parenthesis">( )</button>
+        <button class="key utility" data-action="percent">%</button>
+        <button class="key utility" data-action="angle">DEG</button>
+
+        <button class="key" data-number="7">7</button>
+        <button class="key" data-number="8">8</button>
+        <button class="key" data-number="9">9</button>
+        <button class="key operator" data-value="÷">÷</button>
+
+        <button class="key" data-number="4">4</button>
+        <button class="key" data-number="5">5</button>
+        <button class="key" data-number="6">6</button>
+        <button class="key operator" data-value="×">×</button>
+
+        <button class="key" data-number="1">1</button>
+        <button class="key" data-number="2">2</button>
+        <button class="key" data-number="3">3</button>
+        <button class="key operator" data-value="−">−</button>
+
+        <button class="key zero" data-number="0">0</button>
+        <button class="key" data-action="decimal">.</button>
+        <button class="key operator" data-value="+">+</button>
+        <button class="key equals" data-action="equals">=</button>
+      </section>
+      <p class="hint">TYPE A FORMULA · PRESS ENTER TO LAUNCH</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
