@@ -145,6 +145,11 @@
     </div>
     <dialog class="detail-modal" id="detailModal"><button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button><div id="modalContent"></div></dialog>
     <div class="toast" id="toast" role="status"></div>
+    <script>
+      if (window.location.hash === "#home") {
+        window.history.replaceState(null, "", "#birthday");
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
